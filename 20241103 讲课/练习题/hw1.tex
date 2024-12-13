@@ -1,0 +1,128 @@
+\documentclass{noithesis}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{paralist}
+\usepackage{textcomp}
+\theoremstyle{definition}
+\newtheorem{example}{例}[subsection]
+\newtheorem{corallary}[example]{推论}
+\newtheorem{lemma}[example]{引理}
+\newtheorem{definition}[example]{定义}
+\newtheorem{note}[example]{注}
+\newtheorem{theorem}[example]{定理}
+
+\newenvironment{solution}{{\noindent\it 解.}\quad}{\hfill $\square$\par}
+
+
+
+\def\Z{\mathbb{Z}}
+\def\N{\mathbb{N}}
+\def\R{\mathbb{R}}
+\def\C{\mathbb{C}}
+\def\Q{\mathbb{Q}}
+\def\ker{\mathrm{Ker}}
+\def\im{\mathrm{Im}}
+\def\coker{\mathrm{Coker}}
+\def\rank{\mathrm{rank}\ }
+\def\dim{\mathrm{dim}\ }
+\def\Tr{\mathrm{Tr}}
+\def\le{\leqslant}
+\def\ge{\geqslant}
+\def\a{\alpha}
+\def\b{\beta}
+\def\la{\langle}
+\def\ra{\rangle}
+\def\mf{\mathfrak}
+\def\l{\left}
+\def\r{\right}
+\def\ov{\overline}
+\def\ba{\begin{aligned}}
+\def\ea{\end{aligned}}
+\def\i{\mathrm{i}}
+\def\iff{\Leftrightarrow}
+\newcommand\E{\mathbb{E}}
+\newcommand\cj[1]{\overline #1 '}
+\newcommand{\kai}{\CJKfamily{kai}}
+\usepackage{hyperref}
+\hypersetup{hypertex=true,
+            colorlinks=true,
+            linkcolor=blue,
+            anchorcolor=blue,
+            citecolor=blue}
+
+\begin{document}
+
+
+\def\R{\mathbb{R}}
+\def\Z{\mathbb{Z}}
+
+\def\d{\mathrm{d}}
+\def\eps{\epsilon}
+\title {数论习题}
+
+\author {feecle6418}
+
+\maketitle
+
+\section{唯一分解，数论函数，同余，整除分块}
+
+\subsection{数学题}
+
+\begin{compactenum}
+\item 设 $f,g$ 均为积性函数，证明 $f*g$ 也是积性函数，其中 $*$ 表示狄利克雷卷积。
+\item 设 $f$ 为积性函数且 $f(1)=1$，证明存在唯一一个积性函数 $f^{-1}$ 使得 $f*f^{-1}=\iota$。
+\item 证明所有满足 $f(1)=1$ 的积性函数在运算 $*$、单位元 $\iota$ 下构成一个 Abel 群。
+\item 设 $n$ 是任意正整数。证明 $\prod_{1\le j\le i,j\bot i}j^2 \equiv 1\pmod n$。
+\item 设 $n$ 是任意正整数。证明 $\prod_{1\le j\le i,j\bot i}j \equiv 1\pmod n$ 或 $\prod_{1\le j\le i,j\bot i}j \equiv n-1\pmod n$。当 $n$ 满足什么条件时前者成立？
+\end{compactenum}
+
+\subsection{编程题}
+
+\begin{compactenum}
+\item P5656：课件上的习题。
+\item P1082：课件上的习题。
+\item P2613：课件上的习题。
+\item P1495：课件上的习题。
+\item CF1706D2：课件上的习题。
+\item CF1717E：课件上的习题。
+\item P7960：课上提到的习题。建议思考一下 $O(n\log\log n)$ 做法。
+\item P4588：课上提到的习题。建议使用 CRT 做法。
+\end{compactenum}
+
+
+\section{卢卡斯定理}
+
+\subsection{数学题}
+
+\begin{compactenum}
+\item 试给出 $\binom{n+m}m\equiv 1\pmod 2$ 关于 $n,m$ 的二进制表示的充要条件。
+\end{compactenum}
+
+\subsection{编程题}
+
+\begin{compactenum}
+\item ARC137D：课上提到的习题。
+\item CF1770F。
+\item P6669。
+\end{compactenum}
+
+\section{阶与原根}
+
+\subsection{数学题}
+
+\begin{compactenum}
+\item 给定奇质数的幂次 $p^m$ 以及正整数 $k$，求有几个整数 $1\le x<p^m$ 满足 $x$ 模 $p^m$ 意义下的阶等于 $k$。
+\item 设不存在整数 $x>1$ 使得 $x^2|n$。证明 $\Z_{n^2}^*\cong \Z_n\times \Z_n^*$，其中 $\Z_n$ 表示模 $n$ 加法群，$\Z_n^*$ 表示所有 $n$ 以内与 $n$ 互质的数构成的模 $n$ 乘法群。
+\item 给定奇质数的幂次 $p^m$。若 $g$ 为 $p^m$ 的原根，证明存在 $2p^m$ 的原根 $g'$ 满足 $g\equiv g'\pmod {p^m}$。 
+\end{compactenum}
+
+\subsection{编程题}
+
+\begin{compactenum}
+\item P6091：课件上的习题。
+\item P8993：课件上的习题。
+\item P8457。
+\end{compactenum}
+
+\end{document}
